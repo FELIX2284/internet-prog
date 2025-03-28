@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;  
+            text-align: center;
+        }
+        header{
+            background: #4caf50;
+            padding: 20px;
+            color: white;
+            padding: 20px;
+        }
+        .contact-frm, .social-lnks
+        {
+            background: white;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        input, textarea
+        {
+            width: 100%;
+            padding: 10px;
+            margin: 10px, 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #4caf50;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #45a049;
+        }
+        .social-lnks a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 20px;
+            color: #4caf50;
+            text-decoration: none;
+        }
+        .social-lnks a :hover{
+            color: #388e3c;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <p>Please Contact me using the form below or by fillowing me on social media!</p>
+
+    </header>
+    <section class="contact-frm">
+        <h2>Send a Message</h2>
+        <form id="contactfrm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="Message">Message</label>
+            <textarea id="Message" name="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </section>
+    <section class="social-lnks">
+        <h2>Connect with Me</h2>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+        <a href="malito:odhiambof625@gmail.com"><i class="fas fa-envelope"></i>Email Me</a>
+    </section>
+    <script>
+        document.getElementById('contactfrm').addEventListener('submit', function(event)
+    {
+        event.preventDefault();
+        alert('your message has been sent successfully!');
+        this.reset();
+    });
+    
+    </script>
+</body>
+</html>
